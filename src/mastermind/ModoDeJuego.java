@@ -13,4 +13,20 @@ public enum ModoDeJuego {
 		this.repetirColores = repetirColores;
 		this.numIntentos = numIntentos;
 	}
+	
+	public int getNumCasillas() {
+		return numCasillas;
+	}
+	
+	public int getNumColores() {
+		return numColores;
+	}
+	
+	public boolean getRepetirColores() {
+		return repetirColores;
+	}
+	
+	public int getNumIntentos() {
+		return numIntentos;
+	}
 }

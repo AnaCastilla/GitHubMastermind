@@ -10,4 +10,8 @@ public class Jugador {
 		this.tablero = tablero;
 		this.combinacionSecreta = combinacionSecreta;
 	}
+	
+	public static void introducirCombinacion(ModoDeJuego modo) {
+		Combinacion newComb = new Combinacion(modo);
+	}
 }
