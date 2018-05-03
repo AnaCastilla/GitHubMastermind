@@ -1,6 +1,6 @@
 package mastermind;
 
-public class Combinacion {
+public class Combinacion implements DibujableCombinacion {
 
 	protected Ficha[] arrayFicha;
 	
@@ -22,6 +22,13 @@ public class Combinacion {
 	
 	public static void modificarCombinacion(Combinacion comb) {
 		
+	}
+
+
+	@Override
+	public String dibujarCombinacion(Combinacion combinacion) {
+		
+		return null;
 	}
 	
 }

@@ -1,6 +1,6 @@
 package mastermind;
 
-public class Ficha implements Cloneable {
+public class Ficha implements Cloneable, DibujableFicha {
 
 	private String colorFicha;
 
@@ -28,5 +28,11 @@ public class Ficha implements Cloneable {
 	
 	public String toString() {
 		return String.format("%s", colorFicha);
+	}
+
+	@Override
+	public String dibujarFicha(Ficha ficha) {
+		
+		return null;
 	}
 }

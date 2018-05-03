@@ -2,7 +2,7 @@ package mastermind;
 
 import java.util.ArrayList;
 
-public class Tablero {
+public class Tablero implements DibujableTablero {
 
 	Combinacion combinacion;
 	ArrayList<Combinacion> combOculta;
@@ -10,5 +10,11 @@ public class Tablero {
 	
 	public Tablero(Combinacion combinacion) {
 		this.combinacion = combinacion;
+	}
+
+	@Override
+	public String dibujarTablero(Tablero tablero) {
+		
+		return null;
 	}
 }
