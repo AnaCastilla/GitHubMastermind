@@ -25,8 +25,29 @@ public class Main {
 			} else if (start == 3) {
 				Menu.despedida();
 				salir = true;
+			} else {
+				Menu.seleccionarDificultad();
+				elec = Teclado.leerValoresMaxMin(3, 1, ValoresMaxMin.AMBOS_INC);
+				
+				if (elec == 1) {
+					System.out.println("¡Has elegido el modo de dificultad fácil!\nJugarás tú con la máquina, ¡buena suerte!");
+					Menu.partidaFacil();
+				} if (elec == 2) {
+					System.out.println("¡Has elegido el modo de dificultad medio!\nJugarás tú con la máquina, ¡buena suerte!");
+					Menu.partidaMedio();
+				} if (elec == 3) {
+					System.out.println("¡Has elegido el modo de dificultad difícil!\nJugará la máquina contra ella misma");
+					Menu.partidaDificil();
+				}
+						
+				
 			}
 
 		}
 	}
 }
+
+
+
+		
+	

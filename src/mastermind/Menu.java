@@ -25,4 +25,22 @@ public class Menu {
 	public static void despedida() {
 		System.out.println("¡Hasta pronto!");
 	}
+	
+	public static void seleccionarDificultad() {
+		System.out.println("Selecciona dificultad de la partida: \n  " + Colores.LETRA_VERDE + "(1) Fácil" + Colores.RESET);
+		System.out.println(Colores.LETRA_AMARILLO + "  (2) Medio" + Colores.RESET);
+		System.out.println(Colores.LETRA_ROJO + "  (3) Difícil" + Colores.RESET);
+	}
+	
+	public static Partida partidaFacil() {
+		return Partida.empezarPartida(ModoDeJuego.FACIL);
+	}
+	
+	public static Partida partidaMedio() {
+		return Partida.empezarPartida(ModoDeJuego.MEDIO);
+	}
+	
+	public static Partida partidaDificil() {
+		return Partida.empezarPartida(ModoDeJuego.MEDIO);
+	}
 }
