@@ -5,7 +5,7 @@ public class Combinacion {
 	protected Ficha[] arrayFicha;
 	
 	public Combinacion(ModoDeJuego modo) {
-		arrayFicha = new Ficha[modo.getNumCasillas()];	
+		arrayFicha = new Ficha[modo.getNumCasillas()];
 	}
 	
 	
