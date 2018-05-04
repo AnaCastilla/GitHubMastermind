@@ -1,6 +1,6 @@
 package mastermind;
 
-public class Combinacion {
+public class Combinacion implements DibujableCombinacion {
 
 	protected Ficha[] arrayFicha;
 	
@@ -17,11 +17,20 @@ public class Combinacion {
 		Combinacion newComb = new Combinacion(modo);
 	}
 	
-	public static void calcularRespuesta(Respuesta respuesta) {
+	//respuesta es la combinación que el usuario introduce para averiguar la combinacion secreta  y combSecreta es 
+	// dicha combinación secreta que se intenta averiguar (del usuario o de la máquina)
+	public static void calcularRespuesta(Respuesta respuesta, Combinacion combSecreta) {
 	}
 	
 	public static void modificarCombinacion(Combinacion comb) {
 		
+	}
+
+
+	@Override
+	public String dibujarCombinacion(Combinacion combinacion) {
+		
+		return null;
 	}
 	
 }
