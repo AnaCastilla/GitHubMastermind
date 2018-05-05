@@ -37,8 +37,9 @@ public enum ModoDeJuego {
 	}
 	
 	/**
-	 * @see #getNumCasillas(int)
+	 * @see #getNumCasillas()
 	 * @return Número de casillas del modo elegido 
+	 * @since 2.0
 	 */
 	
 	public int getNumCasillas() {
