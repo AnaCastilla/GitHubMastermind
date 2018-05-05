@@ -1,7 +1,19 @@
 package mastermind;
 
+
+/**
+ * Clase que se encarga de crear métodos para llamarlos desde la clase Main 
+ * 
+ * @author Ana Castilla
+ * @version 1.0
+ * @since 1.0
+ */
 public class Menu {
 
+	/**
+	 * Primera pantalla que se muestra al ejecutar el Main
+	 * @see #bienvenida()
+	 */
 	public static void bienvenida() {
 		final String IC = "\u1433";
 		System.out.printf(
@@ -15,6 +27,10 @@ public class Menu {
 						IC, IC, IC);
 	}
 
+	/**
+	 * Pantalla que se muestra al introducir 2 en la pantalla de bienvenida
+	 * @see #instrucciones()
+	 */
 	public static void instrucciones() {
 		System.out.println("INSTRUCCIONES DEL MASTERMIND:\r\n"
 				+ "Mastermind es un juego de mesa, de ingenio y reflexión, para dos jugadores.\r\n"
@@ -22,24 +38,44 @@ public class Menu {
 				+ "Termina al averiguarse la combinación (es decir, se consigue una combinación con cuatro negras), o bien se agotan el número de intentos.\n  (1) Volver atrás\n  (2) Salir");
 	}
 	
+	/**
+	 * Pantalla que se muestra al querer salir del juego
+	 * @see #despedida()
+	 */
 	public static void despedida() {
 		System.out.println("¡Hasta pronto!");
 	}
 	
+	/**
+	 * Pantalla en la que se podrá seleccionar la dificultad (fácil, medio o difícil) de la partida
+	 * @see #seleccionarDificultad()
+	 */
 	public static void seleccionarDificultad() {
 		System.out.println("Selecciona dificultad de la partida: \n  " + Colores.LETRA_VERDE + "(1) Fácil" + Colores.RESET);
 		System.out.println(Colores.LETRA_AMARILLO + "  (2) Medio" + Colores.RESET);
 		System.out.println(Colores.LETRA_ROJO + "  (3) Difícil" + Colores.RESET);
 	}
 	
+	/**
+	 * @see #partidaFacil()
+	 * @return Devuelve una partida en modo fácil
+	 */
 	public static Partida partidaFacil() {
 		return Partida.empezarPartida(ModoDeJuego.FACIL);
 	}
 	
+	/**
+	 * @see #partidaMedio()
+	 * @return Devuelve una partida en modo medio
+	 */
 	public static Partida partidaMedio() {
 		return Partida.empezarPartida(ModoDeJuego.MEDIO);
 	}
 	
+	/**
+	 * @see #partidaDificil()
+	 * @return Devuelve una partida en modo difícil
+	 */
 	public static Partida partidaDificil() {
 		return Partida.empezarPartida(ModoDeJuego.MEDIO);
 	}

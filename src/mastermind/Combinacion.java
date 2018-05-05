@@ -22,6 +22,7 @@ public class Combinacion implements DibujableCombinacion {
 	/**
 	 * Constructor Combinacion acorde al modo de juego que se elija y dependiendo de ello, se podrán elegir un determinado número de fichas
 	 * dado el número de casillas disponibles (modo fácil: 4 casillas; modo medio: 5 casillas; modo difícil: 8 casillas)
+	 * @see #Combinacion(ModoDeJuego)
 	 * @param modo
 	 */
 	public Combinacion(ModoDeJuego modo) {
@@ -30,7 +31,7 @@ public class Combinacion implements DibujableCombinacion {
 	
 	/**
 	 * @see #aniadirFicha()
-	 * @return 
+	 * @return Nueva ficha creada con el color elegido
 	 */
 	
 	public static Ficha aniadirFicha(String color) {
@@ -38,20 +39,37 @@ public class Combinacion implements DibujableCombinacion {
 		return newFicha;
 	}
 	
+	/**
+	 * @see #crearCombinacion(ModoDeJuego)
+	 * @param modo
+	 */
 	public static void crearCombinacion(ModoDeJuego modo) {
 		Combinacion newComb = new Combinacion(modo);
 	}
 	
+	/**
+	 * @see #calcularRespuesta(Respuesta, Combinacion)
+	 * @param respuesta
+	 * @param combSecreta
+	 */
 	//respuesta es la combinación que el usuario introduce para averiguar la combinacion secreta  y combSecreta es 
 	// dicha combinación secreta que se intenta averiguar (del usuario o de la máquina)
 	public static void calcularRespuesta(Respuesta respuesta, Combinacion combSecreta) {
 	}
 	
+	/**
+	 * @see #modificarCombinacion(Combinacion)
+	 * @param comb
+	 */
 	public static void modificarCombinacion(Combinacion comb) {
 		
 	}
 
-
+	/**
+	 * @see #dibujarCombinacion(Combinacion)
+	 * @param combinacion
+	 * @return Devuelve la interfaz de la Combinacion
+	 */
 	@Override
 	public String dibujarCombinacion(Combinacion combinacion) {
 		
