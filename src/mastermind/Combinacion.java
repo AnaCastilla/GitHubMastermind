@@ -33,8 +33,9 @@ public class Combinacion implements DibujableCombinacion {
 	 * @return 
 	 */
 	
-	public static void aniadirFicha(String color) {
+	public static Ficha aniadirFicha(String color) {
 		Ficha newFicha = new Ficha(color);
+		return newFicha;
 	}
 	
 	public static void crearCombinacion(ModoDeJuego modo) {
