@@ -1,6 +1,19 @@
 package mastermind;
 
+/**
+ * Clase dedicada a los colores que podemos elegir para las fichas de las casillas del juego
+ * 
+ * @author Ana Castilla
+ * @version 1.0
+ * @since 1.0
+ *
+ */
+
 public final class Colores {
+	
+	/*
+	 * Constantes de todos los colores disponibles
+	 */
 
 	public static final String RESET = "\u001B[0m";
 	public static final String FONDO_BLANCO = "\u001B[107m";
