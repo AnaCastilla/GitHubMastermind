@@ -30,7 +30,8 @@ public class Combinacion implements DibujableCombinacion {
 	}
 	
 	/**
-	 * @see #aniadirFicha()
+	 * @see #aniadirFicha(String)
+	 * @param color
 	 * @return Nueva ficha creada con el color elegido
 	 */
 	
