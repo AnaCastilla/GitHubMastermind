@@ -23,6 +23,7 @@ public enum ModoDeJuego {
 	
 	/**
 	 * Constructor del Enum con sus correspondientes valores atendiendo al modo que se elija
+	 * @see #ModoDeJuego(int, int, boolean, int)
 	 * @param numCasillas
 	 * @param numColores
 	 * @param repetirColores
@@ -69,7 +70,6 @@ public enum ModoDeJuego {
 	 * @see #getNumIntentos()
 	 * @return Número de intentos disponibles del modo elegido
 	 */
-	
 	
 	public int getNumIntentos() {
 		return numIntentos;

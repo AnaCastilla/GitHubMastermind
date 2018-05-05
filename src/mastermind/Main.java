@@ -2,6 +2,13 @@ package mastermind;
 
 import mastermind.Teclado.ValoresMaxMin;
 
+/**
+ * Clase donde se va a ejecutar el juego 
+ * 
+ * @author Ana Castilla
+ * @version 1.0
+ * @since 1.0
+ */
 public class Main {
 
 	public static void main(String[] args) {
