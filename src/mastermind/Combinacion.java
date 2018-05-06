@@ -58,6 +58,12 @@ public class Combinacion implements DibujableCombinacion {
 	public static void calcularRespuesta(Respuesta respuesta, Combinacion combSecreta) {
 	}
 	
+	//Para hacer el JUnit ya que no tengo el método verdaderamente hecho
+	public static String respuesta(String[] respuesta, String[] combSecreta) {
+		String resultado = null;
+		return resultado;
+	}
+	
 	/**
 	 * @see #modificarCombinacion(Combinacion)
 	 * @param comb
