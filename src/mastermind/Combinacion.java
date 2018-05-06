@@ -1,5 +1,7 @@
 package mastermind;
 
+import javax.swing.plaf.FontUIResource;
+
 /**
  * Clase para crear combinaciones de fichas de los colores que elijamos durante el juego
  * y distintos métodos para manipularlas
@@ -59,9 +61,22 @@ public class Combinacion implements DibujableCombinacion {
 	}
 	
 	//Para hacer el JUnit ya que no tengo el método verdaderamente hecho
-	public static String respuesta(String[] respuesta, String[] combSecreta) {
-		String resultado = null;
-		return resultado;
+	public static String[] respuesta(ModoDeJuego modo) {
+		String[] respuesta = null;
+		System.out.println("Introduce " + modo.getNumCasillas() + " colores para la respuesta: ");
+		for (int i = 0; i < modo.getNumCasillas(); i++) {
+			respuesta[i] = Teclado.leerCadena();
+		}
+		return respuesta;
+	}
+	
+	public static String[] combSecreta(ModoDeJuego modo) {
+		String[] combSecreta = null;
+		System.out.println("Introduce " + modo.getNumCasillas() + " colores para la respuesta: ");
+		for (int i = 0; i < modo.getNumCasillas(); i++) {
+			combSecreta[i] = Teclado.leerCadena();
+		}
+		return combSecreta;
 	}
 	
 	/**
