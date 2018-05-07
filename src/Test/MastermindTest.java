@@ -22,11 +22,25 @@ class MastermindTest {
 	void respuestaTest() {
 		
 	
-		
-		System.out.println("Ningún color de la respuesta está en la combinación secreta (modo medio, porque no se pueden repetir colores)");
-		
-		
+		System.out.println("CLASES DE EQUIVALENCIA VÁLIDAS\nTodas las fichas están bien colocadas:\nModo Fácil: ");
+		assertArrayEquals(Combinacion.respuesta(ModoDeJuego.FACIL), Combinacion.combSecreta(ModoDeJuego.FACIL));
+		System.out.println("Modo Medio: ");
 		assertArrayEquals(Combinacion.respuesta(ModoDeJuego.MEDIO), Combinacion.combSecreta(ModoDeJuego.MEDIO));
+		System.out.println("Modo Difícil: ");
+		assertArrayEquals(Combinacion.respuesta(ModoDeJuego.DIFICIL), Combinacion.combSecreta(ModoDeJuego.DIFICIL));
+		
+		System.out.println("\nNinguna ficha bien colocada: \nModo Fácil: ");
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.FACIL), Combinacion.combSecreta(ModoDeJuego.FACIL));
+		System.out.println("Modo Medio: ");
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.MEDIO), Combinacion.combSecreta(ModoDeJuego.MEDIO));
+		
+		
+		
+		
+		
+		//System.out.println("Ningún color de la respuesta está en la combinación secreta (modo medio, porque no se pueden repetir colores)");
+		
+		//assertArrayEquals(Combinacion.respuesta(ModoDeJuego.MEDIO), Combinacion.combSecreta(ModoDeJuego.MEDIO));
 	}
 
 }
