@@ -21,6 +21,18 @@ class MastermindTest {
 
 	@Test
 	
+	public String[] combNumCasilla(int n) {
+		String[] combinacion= new String[n];
+		String aux;
+		System.out.println("Introduce " + n + " colores para la combinación secreta: ");
+		for (int i = 0; i < combinacion.length; i++) {
+			aux = Teclado.leerCadena();
+			combinacion[i] = aux;
+		}
+		return combinacion;
+	}
+	
+	
 	void respuestaTest() {
 		
 	
@@ -49,6 +61,7 @@ class MastermindTest {
 		
 		System.out.println("Colores repetidos en el modo difícil\n Escribe 8 colores para el modo difícil que se repitan:");
 		assertNotEquals(Combinacion.respuesta(ModoDeJuego.DIFICIL), Combinacion.combSecreta(ModoDeJuego.DIFICIL));
+		
 		
 		System.out.println("CLASES DE EQUIVALENCIA NO VÁLIDAS\nNingún color de la respuesta está en la combinación secreta\nModo Fácil: ");
 		assertNotEquals(Combinacion.respuesta(ModoDeJuego.FACIL), Combinacion.combSecreta(ModoDeJuego.FACIL));
@@ -90,7 +103,25 @@ class MastermindTest {
 		System.out.println("Modo Difícil: ");
 		assertNotEquals(Combinacion.respuesta(ModoDeJuego.DIFICIL), Combinacion.combSecreta(ModoDeJuego.DIFICIL));
 		
+		System.out.println("La combinación secreta tiene más o menos casillas que la combinación respuesta (1º más casillas, 2º menos) \nModo Fácil:");
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.FACIL), combNumCasilla(5));
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.FACIL), combNumCasilla(3));
+		System.out.println("Modo Medio: ");
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.MEDIO), combNumCasilla(6));
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.MEDIO), combNumCasilla(4));
+		System.out.println("Modo Difícil: ");
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.DIFICIL), combNumCasilla(9));
+		assertNotEquals(Combinacion.respuesta(ModoDeJuego.DIFICIL), combNumCasilla(7));
 		
+		System.out.println("La respuesta tiene más o menos casillas que la combinación secreta (1º más casillas, 2º menos)\nModo Fácil: ");
+		assertNotEquals(combNumCasilla(5), Combinacion.combSecreta(ModoDeJuego.FACIL));
+		assertNotEquals(combNumCasilla(3), Combinacion.combSecreta(ModoDeJuego.FACIL));
+		System.out.println("Modo Medio: ");
+		assertNotEquals(combNumCasilla(6), Combinacion.combSecreta(ModoDeJuego.MEDIO));
+		assertNotEquals(combNumCasilla(4), Combinacion.combSecreta(ModoDeJuego.MEDIO));
+		System.out.println("Modo Difícil: ");
+		assertNotEquals(combNumCasilla(9), Combinacion.combSecreta(ModoDeJuego.DIFICIL));
+		assertNotEquals(combNumCasilla(7), Combinacion.combSecreta(ModoDeJuego.DIFICIL));
 	}
 
 }
