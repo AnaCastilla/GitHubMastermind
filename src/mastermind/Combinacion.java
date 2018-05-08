@@ -62,19 +62,23 @@ public class Combinacion implements DibujableCombinacion {
 	
 	//Para hacer el JUnit ya que no tengo el método verdaderamente hecho
 	public static String[] respuesta(ModoDeJuego modo) {
-		String[] respuesta = null;
+		String[] respuesta = new String[modo.getNumCasillas()];
+		String aux;
 		System.out.println("Introduce " + modo.getNumCasillas() + " colores para la respuesta: ");
-		for (int i = 0; i < modo.getNumCasillas(); i++) {
-			respuesta[i] = Teclado.leerCadena();
+		for (int i = 0; i < respuesta.length; i++) {
+			aux = Teclado.leerCadena();
+			respuesta[i] = aux;
 		}
 		return respuesta;
 	}
 	
 	public static String[] combSecreta(ModoDeJuego modo) {
-		String[] combSecreta = null;
-		System.out.println("Introduce " + modo.getNumCasillas() + " colores para la respuesta: ");
-		for (int i = 0; i < modo.getNumCasillas(); i++) {
-			combSecreta[i] = Teclado.leerCadena();
+		String[] combSecreta = new String[modo.getNumCasillas()];
+		String aux;
+		System.out.println("Introduce " + modo.getNumCasillas() + " colores para la combinación secreta: ");
+		for (int i = 0; i < combSecreta.length; i++) {
+			aux = Teclado.leerCadena();
+			combSecreta[i] = aux;
 		}
 		return combSecreta;
 	}
